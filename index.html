@@ -1,50 +1,102 @@
-<div class="cta-wrapper">
-    <!-- Die 2 Bilder nebeneinander, gleiche Breite wie Buttons -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Euro Drivers — CE Fahrer Vermittlung</title>
+<!-- WICHTIG: Seite wird von Suchmaschinen nicht indexiert -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --orange: #E85D00;
+    --dark-anthracite: #2d2d2d;
+    --white: #ffffff;
+    --bg-outer: #424242;
+    --grey-light: #f9f9f9;
+    --grey-mid: #666;
+    --grey-border: #eee;
+    --font: 'Verdana', sans-serif;
+  }
+  html { background: var(--bg-outer); }
+  body { font-family: var(--font); font-size: 14px; color: var(--dark-anthracite); background: var(--bg-outer); line-height: 1.3; }
+
+  .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); }
+  .headerpic img { width: 100%; height: auto; display: block; }
+
+  /* Hero */
+  .hero { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; align-items: start; text-align: left; }
+  .hero-eyebrow { font-size: 0.65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); font-weight: bold; margin-bottom: 0.3rem; }
+  .hero h1 { font-size: 1.2rem; font-weight: 700; line-height: 1.1; }
+  .hero h1 em { font-style: normal; color: var(--orange); }
+  .hero-sub { font-size: 0.8rem; color: var(--grey-mid); }
+
+  /* Strip & Cards */
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.75rem 1rem; font-size: 0.7rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; }
+  .strip span::before { content: '✓ '; color: var(--orange); }
+  .cards { max-width: 900px; margin: 1.5rem auto; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); }
+  .card { padding: 1rem; border-right: 1px solid var(--grey-border); text-align: center; }
+  .card:last-child { border-right: none; }
+  .card-num { font-size: 1.2rem; font-weight: 700; color: var(--orange); }
+  .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin: 0.2rem 0; }
+
+  /* CTA Bereich */
+  .cta-wrapper { padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  
+  /* Bilder: 280px breit, nebeneinander, vergrößert */
+  .cta-images { display: flex; align-items: center; justify-content: space-between; width: 280px; gap: 10px; margin-bottom: 0.2rem; }
+  .cta-images img { width: calc(50% - 5px); height: auto; object-fit: contain; }
+  
+  /* Buttons: untereinander, 280px breit */
+  .btn { display: block; width: 280px; padding: 0.6rem 0; text-transform: uppercase; font-weight: 700; font-size: 0.75rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
+  .btn-contact { background: var(--orange); color: var(--white); }
+  .btn-visit { background: var(--white); color: var(--orange); }
+
+  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.7rem; padding: 1rem; text-align: center; }
+  footer a { color: #ccc; text-decoration: none; margin: 0 0.5rem; }
+
+  @media (max-width: 768px) { 
+    .hero, .strip, .cards { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-box">
+  <div class="headerpic"><img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung" width="1080" height="auto"></div>
+
+  <section class="hero">
+    <div><p class="hero-eyebrow">Direktvermittlung · Keine Zeitarbeit</p></div>
+    <div><h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1></div>
+    <div><p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p></div>
+  </section>
+
+  <div class="strip">
+    <span>Direktvermittlung</span>
+    <span>CE · Code 95 · ADR</span>
+    <span>EU-weites Sourcing</span>
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Erfahrung</div></div>
+    <div class="card"><div class="card-num">15</div><div class="card-label">Sprachen</div></div>
+    <div class="card"><div class="card-num">100%</div><div class="card-label">Direktanstellung</div></div>
+  </div>
+
+  <div class="cta-wrapper">
     <div class="cta-images">
       <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp" alt="Connecting">
       <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp" alt="Logo">
     </div>
-    
-    <!-- Die Buttons darunter -->
     <a class="btn btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
     <a class="btn btn-visit" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
+  </div>
+
+  <footer>
+    <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a><br>
+    <span>© 2026 Euro Drivers · Worms</span>
+  </footer>
 </div>
 
-<style>
-  .cta-wrapper { 
-    padding: 2rem 1.5rem; 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 0.75rem; 
-  }
-
-  .cta-images { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; /* Bilder füllen den Platz */
-    width: 280px; 
-    gap: 10px; 
-    margin-bottom: 0.25rem; 
-  }
-  .cta-images img { 
-    width: calc(50% - 5px); /* Teilt die 280px exakt auf */
-    height: auto; 
-    object-fit: contain; 
-  }
-
-  .btn { 
-    display: block; 
-    width: 280px; 
-    padding: 0.6rem 0; 
-    text-transform: uppercase; 
-    font-weight: 700; 
-    font-size: 0.75rem; 
-    text-decoration: none; 
-    border: 2px solid var(--orange); 
-    transition: .2s; 
-  }
-  .btn-contact { background: var(--orange); color: var(--white); }
-  .btn-visit { background: var(--white); color: var(--orange); }
-</style>
+</body>
+</html>
