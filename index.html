@@ -10,21 +10,21 @@
     --orange: #E85D00;
     --dark-anthracite: #2d2d2d;
     --white: #ffffff;
-    --bg: #1a1a1a;
+    --bg-outer: #424242; /* Außenbereich */
     --grey-light: #f9f9f9;
     --grey-mid: #666;
     --grey-border: #eee;
     --font: 'Verdana', Geneva, Tahoma, sans-serif;
   }
-  html { background: var(--bg); }
-  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg); line-height: 1.6; }
+  html { background: var(--bg-outer); }
+  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg-outer); line-height: 1.6; }
 
   .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); }
 
   /* HEADERPIC */
   .headerpic img { width: 100%; height: auto; display: block; }
 
-  /* HERO - Jetzt auf weißem Hintergrund */
+  /* HERO */
   .hero { background: var(--white); color: var(--dark-anthracite); padding: 3rem 2rem; text-align: center; }
   .hero-eyebrow { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; font-weight: bold; }
   .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 1.25rem; }
@@ -54,9 +54,10 @@
   .card-label { font-size: 0.75rem; text-transform: uppercase; color: var(--dark-anthracite); font-weight: bold; margin-bottom: .5rem; }
   .card-desc { font-size: 0.82rem; color: var(--grey-mid); }
 
-  /* CTA BLOCK */
-  .cta-block { background: var(--orange); color: var(--white); text-align: center; padding: 3rem 2rem; }
-  .btn-white { display: inline-block; background: var(--white); color: var(--orange); text-decoration: none; font-weight: 700; padding: 0.85rem 2rem; text-transform: uppercase; }
+  /* CTA BLOCK - Jetzt in weißer Box */
+  .cta-block { background: var(--white); text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--grey-border); }
+  .btn-contact { display: inline-block; background: var(--white); color: var(--orange); border: 2px solid var(--orange); text-decoration: none; font-weight: 700; padding: 0.85rem 2rem; text-transform: uppercase; transition: .2s; }
+  .btn-contact:hover { background: var(--orange); color: var(--white); }
 
   /* FOOTER */
   footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem 2rem; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
@@ -96,7 +97,7 @@
   </div>
 
   <div class="cta-block">
-    <a class="btn-white" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
+    <a class="btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
   </div>
 
   <footer>
@@ -106,7 +107,7 @@
     <a href="https://euro-drivers.eu" target="_blank" rel="noopener">euro-drivers.eu</a>
     <span>© 2026 Euro Drivers · Worms</span>
   </footer>
-
 </div>
+
 </body>
 </html>
