@@ -19,24 +19,18 @@
   }
   body { font-family: var(--font); background: var(--bg-outer); padding: 20px; line-height: 1.4; color: var(--dark-anthracite); }
   
-  /* Haupt-Layout: 1080px */
   .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); }
-  
-  /* Header über alles */
   .headerpic img { width: 100%; display: block; }
 
-  /* Wrapper für Main & Sidebar */
   .content-wrapper { display: flex; flex-direction: row; }
-
-  /* Hauptinhalt (680px) */
   .main-content { width: 680px; }
+  
   .hero { padding: 2rem; text-align: left; }
   .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-anthracite); opacity: 0.8; }
   .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
   .hero h1 em { font-style: normal; color: var(--orange); }
   .hero-sub { font-size: 1rem; color: var(--grey-mid); margin-bottom: 2rem; }
 
-  /* Strip & Cards */
   .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; font-weight: 600; }
   .strip span::before { content: '✓ '; color: var(--orange); }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); margin: 2rem; }
@@ -45,18 +39,17 @@
   .card-num { font-size: 1.4rem; font-weight: 700; color: var(--orange); }
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin-top: 0.2rem; }
 
-  /* Sidebar (400px) - Mit Margin nach unten geschoben */
-  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 50px; }
+  /* Sidebar: Etwas bündiger, weniger Abstand nach oben */
+  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 20px; }
   .sidebar img { width: 100%; max-width: 360px; height: auto; display: block; }
   .btn { display: block; width: 100%; max-width: 360px; padding: 0.75rem 0; text-align: center; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
   .btn-visit { background: var(--white); color: var(--orange); }
 
-  /* Footer */
-  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem; text-align: center; }
-  footer a { color: #ccc; text-decoration: none; margin: 0 0.5rem; }
+  /* Footer: Hoher Kontrast */
+  footer { background: #1a1a1a; color: #ffffff; font-size: 0.75rem; padding: 1.5rem; text-align: center; }
+  footer a { color: #ffffff; text-decoration: underline; margin: 0 0.5rem; }
 
-  /* Mobile */
   @media (max-width: 768px) {
     .content-wrapper { flex-direction: column; }
     .main-content, .sidebar { width: 100%; border: none; }
@@ -98,7 +91,7 @@
 
   <footer>
     <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a><br>
-    <span>© 2026 Euro Drivers · Worms</span>
+    <span style="opacity: 0.8;">© 2026 Euro Drivers · Worms</span>
   </footer>
 </div>
 
