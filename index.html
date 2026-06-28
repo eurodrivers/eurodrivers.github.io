@@ -25,7 +25,6 @@
   .content-wrapper { display: flex; flex-direction: row; }
   .main-content { width: 680px; }
   
-  /* Hero & Sidebar starten nun exakt auf der gleichen Höhe (2rem Abstand zum Header) */
   .hero { padding: 2rem 2rem 1rem 2rem; text-align: left; }
   .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
 
@@ -36,6 +35,8 @@
 
   .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.8rem 1rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; font-weight: 600; margin-top: 0.5rem; }
   .strip span::before { content: '✓ '; color: var(--orange); }
+  
+  /* Karten-Container */
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); margin: 1rem 2rem; }
   .card { padding: 1rem; border-right: 1px solid var(--grey-border); text-align: center; }
   .card:last-child { border-right: none; }
@@ -50,10 +51,19 @@
   footer { background: #1a1a1a; color: #ffffff; font-size: 0.75rem; padding: 1.5rem; text-align: center; }
   footer a { color: #ffffff; text-decoration: underline; margin: 0 0.5rem; }
 
+  /* Mobile Anpassung */
   @media (max-width: 768px) {
     .content-wrapper { flex-direction: column; }
     .main-content, .sidebar { width: 100%; border: none; }
     .sidebar { margin-top: 20px; border-top: 1px solid var(--grey-border); }
+    
+    /* Karten untereinander anordnen */
+    .cards { grid-template-columns: 1fr; margin: 1rem; }
+    .card { border-right: none; border-bottom: 1px solid var(--grey-border); padding: 0.8rem; }
+    .card:last-child { border-bottom: none; }
+    
+    /* Strip Textgröße für kleine Bildschirme */
+    .strip { grid-template-columns: 1fr; gap: 0.5rem; text-align: left; padding: 1rem; }
   }
 </style>
 </head>
