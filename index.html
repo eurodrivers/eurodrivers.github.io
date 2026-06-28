@@ -25,28 +25,28 @@
   .content-wrapper { display: flex; flex-direction: row; }
   .main-content { width: 680px; }
   
-  .hero { padding: 2rem; text-align: left; }
+  .hero { padding: 2rem 2rem 1rem 2rem; text-align: left; }
   .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-anthracite); opacity: 0.8; }
-  .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+  .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.5rem; }
   .hero h1 em { font-style: normal; color: var(--orange); }
-  .hero-sub { font-size: 1rem; color: var(--grey-mid); margin-bottom: 2rem; }
+  .hero-sub { font-size: 1rem; color: var(--grey-mid); }
 
-  .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; font-weight: 600; }
+  /* Bündiger nach oben geschoben */
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.8rem 1rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; font-weight: 600; margin-top: 0.5rem; }
   .strip span::before { content: '✓ '; color: var(--orange); }
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); margin: 2rem; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); margin: 1rem 2rem; }
   .card { padding: 1rem; border-right: 1px solid var(--grey-border); text-align: center; }
   .card:last-child { border-right: none; }
   .card-num { font-size: 1.4rem; font-weight: 700; color: var(--orange); }
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin-top: 0.2rem; }
 
-  /* Sidebar: Etwas bündiger, weniger Abstand nach oben */
-  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 20px; }
+  /* Sidebar */
+  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 10px; }
   .sidebar img { width: 100%; max-width: 360px; height: auto; display: block; }
   .btn { display: block; width: 100%; max-width: 360px; padding: 0.75rem 0; text-align: center; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
   .btn-visit { background: var(--white); color: var(--orange); }
 
-  /* Footer: Hoher Kontrast */
   footer { background: #1a1a1a; color: #ffffff; font-size: 0.75rem; padding: 1.5rem; text-align: center; }
   footer a { color: #ffffff; text-decoration: underline; margin: 0 0.5rem; }
 
@@ -75,8 +75,8 @@
         <span>EU-weites Sourcing</span>
       </div>
       <div class="cards">
-        <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Erfahrung</div></div>
-        <div class="card"><div class="card-num">15</div><div class="card-label">Sprachen</div></div>
+        <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Personalvermittlung</div></div>
+        <div class="card"><div class="card-num">27</div><div class="card-label">EU Staaten</div></div>
         <div class="card"><div class="card-num">100%</div><div class="card-label">Direktanstellung</div></div>
       </div>
     </main>
