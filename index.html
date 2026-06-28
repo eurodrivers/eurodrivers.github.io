@@ -10,56 +10,48 @@
     --orange: #E85D00;
     --dark-anthracite: #2d2d2d;
     --white: #ffffff;
-    --bg-outer: #424242; /* Außenbereich */
+    --bg-outer: #424242;
     --grey-light: #f9f9f9;
     --grey-mid: #666;
     --grey-border: #eee;
     --font: 'Verdana', Geneva, Tahoma, sans-serif;
   }
   html { background: var(--bg-outer); }
-  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg-outer); line-height: 1.6; }
+  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg-outer); line-height: 1.4; }
 
   .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); }
 
-  /* HEADERPIC */
+  /* Kompakteres Layout durch angepasste Paddings */
   .headerpic img { width: 100%; height: auto; display: block; }
-
-  /* HERO */
-  .hero { background: var(--white); color: var(--dark-anthracite); padding: 3rem 2rem; text-align: center; }
-  .hero-eyebrow { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; font-weight: bold; }
-  .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 1.25rem; }
+  .hero { background: var(--white); padding: 2rem 2rem 1.5rem; text-align: center; }
+  .hero-eyebrow { font-size: 0.7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; font-weight: bold; }
+  .hero h1 { font-size: 2rem; margin-bottom: 0.75rem; }
   .hero h1 em { font-style: normal; color: var(--orange); }
-  .hero-sub { font-size: 0.95rem; color: var(--dark-anthracite); max-width: 520px; margin: 0 auto 2rem; }
+  .hero-sub { font-size: 0.9rem; max-width: 520px; margin: 0 auto; }
 
-  /* CONNECTING IMG */
-  .connecting-img { text-align: center; padding: 2rem 0; background: var(--white); }
+  .connecting-img { text-align: center; padding: 1rem 0; }
   .connecting-img img { width: 100%; max-width: 380px; height: auto; display: block; margin: 0 auto; }
 
-  /* LOGO + CTA */
-  .logo-cta { background: var(--grey-light); padding: 2rem; text-align: center; }
-  .logo-cta img { width: 100%; max-width: 380px; height: auto; display: block; margin: 0 auto 1.5rem; }
+  .logo-cta { background: var(--white); padding: 1rem 2rem; text-align: center; }
+  .logo-cta img { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto; }
 
-  .btn-main { display: inline-block; background: var(--orange); color: var(--white); text-decoration: none; font-weight: 700; padding: 0.85rem 2.5rem; text-transform: uppercase; border: 2px solid var(--orange); transition: .2s; }
-  .btn-main:hover { background: transparent; color: var(--orange); }
-
-  /* STRIP */
-  .strip { background: var(--white); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.5rem; font-size: 0.8rem; color: var(--grey-mid); text-transform: uppercase; }
+  .strip { background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; }
   .strip span::before { content: '✓  '; color: var(--orange); }
 
-  /* CARDS */
-  .cards { max-width: 860px; margin: 3rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--grey-border); }
-  .card { padding: 1.5rem; border-right: 1px solid var(--grey-border); }
+  .cards { max-width: 860px; margin: 2rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--grey-border); }
+  .card { padding: 1.25rem; border-right: 1px solid var(--grey-border); }
   .card:last-child { border-right: none; }
-  .card-num { font-size: 1.8rem; font-weight: 700; color: var(--orange); margin-bottom: .4rem; }
-  .card-label { font-size: 0.75rem; text-transform: uppercase; color: var(--dark-anthracite); font-weight: bold; margin-bottom: .5rem; }
-  .card-desc { font-size: 0.82rem; color: var(--grey-mid); }
+  .card-num { font-size: 1.5rem; font-weight: 700; color: var(--orange); margin-bottom: 0.25rem; }
+  .card-label { font-size: 0.7rem; text-transform: uppercase; color: var(--dark-anthracite); font-weight: bold; margin-bottom: 0.25rem; }
+  .card-desc { font-size: 0.75rem; color: var(--grey-mid); }
 
-  /* CTA BLOCK - Jetzt in weißer Box */
-  .cta-block { background: var(--white); text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--grey-border); }
-  .btn-contact { display: inline-block; background: var(--white); color: var(--orange); border: 2px solid var(--orange); text-decoration: none; font-weight: 700; padding: 0.85rem 2rem; text-transform: uppercase; transition: .2s; }
-  .btn-contact:hover { background: var(--orange); color: var(--white); }
+  .cta-block { background: var(--white); text-align: center; padding: 1rem 2rem 2rem; }
+  .btn { display: block; margin: 0.5rem auto; width: 100%; max-width: 300px; padding: 0.75rem; text-transform: uppercase; font-weight: 700; font-size: 0.85rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
+  .btn-contact { background: var(--orange); color: var(--white); }
+  .btn-contact:hover { background: transparent; color: var(--orange); }
+  .btn-visit { background: var(--white); color: var(--orange); }
+  .btn-visit:hover { background: var(--orange); color: var(--white); }
 
-  /* FOOTER */
   footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem 2rem; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
   footer a { color: #ccc; text-decoration: none; }
 </style>
@@ -81,7 +73,6 @@
 
   <div class="logo-cta">
     <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp" alt="Logo" width="380" height="auto">
-    <a class="btn-main" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
   </div>
 
   <div class="strip">
@@ -97,7 +88,8 @@
   </div>
 
   <div class="cta-block">
-    <a class="btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
+    <a class="btn btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
+    <a class="btn btn-visit" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
   </div>
 
   <footer>
