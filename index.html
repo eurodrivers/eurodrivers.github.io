@@ -20,11 +20,16 @@
   body { font-family: var(--font); background: var(--bg-outer); padding: 20px; line-height: 1.4; color: var(--dark-anthracite); }
   
   /* Haupt-Layout: 1080px */
-  .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); display: flex; flex-direction: row; }
+  .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); }
+  
+  /* Header über alles */
+  .headerpic img { width: 100%; display: block; }
+
+  /* Wrapper für Main & Sidebar */
+  .content-wrapper { display: flex; flex-direction: row; }
 
   /* Hauptinhalt (680px) */
   .main-content { width: 680px; }
-  .headerpic img { width: 100%; height: auto; display: block; }
   .hero { padding: 2rem; text-align: left; }
   .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-anthracite); opacity: 0.8; }
   .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
@@ -40,60 +45,62 @@
   .card-num { font-size: 1.4rem; font-weight: 700; color: var(--orange); }
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin-top: 0.2rem; }
 
-  /* Sidebar (400px) */
-  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+  /* Sidebar (400px) - Mit Margin nach unten geschoben */
+  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 50px; }
   .sidebar img { width: 100%; max-width: 360px; height: auto; display: block; }
   .btn { display: block; width: 100%; max-width: 360px; padding: 0.75rem 0; text-align: center; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
   .btn-visit { background: var(--white); color: var(--orange); }
 
   /* Footer */
-  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem; text-align: center; grid-column: span 2; }
+  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem; text-align: center; }
   footer a { color: #ccc; text-decoration: none; margin: 0 0.5rem; }
 
   /* Mobile */
   @media (max-width: 768px) {
-    .page-box { flex-direction: column; }
+    .content-wrapper { flex-direction: column; }
     .main-content, .sidebar { width: 100%; border: none; }
-    .sidebar { order: 2; border-top: 1px solid var(--grey-border); }
-    .main-content { order: 1; }
+    .sidebar { margin-top: 20px; border-top: 1px solid var(--grey-border); }
   }
 </style>
 </head>
 <body>
 
 <div class="page-box">
-  <main class="main-content">
-    <div class="headerpic"><img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung"></div>
-    <section class="hero">
-      <p class="hero-eyebrow">Truck Driver Recruitment</p>
-      <h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1>
-      <p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p>
-    </section>
-    <div class="strip">
-      <span>Direktvermittlung / Keine Zeitarbeit</span>
-      <span>CE · Code 95 · ADR</span>
-      <span>EU-weites Sourcing</span>
-    </div>
-    <div class="cards">
-      <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Erfahrung</div></div>
-      <div class="card"><div class="card-num">15</div><div class="card-label">Sprachen</div></div>
-      <div class="card"><div class="card-num">100%</div><div class="card-label">Direktanstellung</div></div>
-    </div>
-  </main>
+  <div class="headerpic"><img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung"></div>
+  
+  <div class="content-wrapper">
+    <main class="main-content">
+      <section class="hero">
+        <p class="hero-eyebrow">Truck Driver Recruitment</p>
+        <h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1>
+        <p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p>
+      </section>
+      <div class="strip">
+        <span>Direktvermittlung / Keine Zeitarbeit</span>
+        <span>CE · Code 95 · ADR</span>
+        <span>EU-weites Sourcing</span>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Erfahrung</div></div>
+        <div class="card"><div class="card-num">15</div><div class="card-label">Sprachen</div></div>
+        <div class="card"><div class="card-num">100%</div><div class="card-label">Direktanstellung</div></div>
+      </div>
+    </main>
 
-  <aside class="sidebar">
-    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp" alt="Connecting">
-    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp" alt="Logo">
-    <a class="btn btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
-    <a class="btn btn-visit" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
-  </aside>
+    <aside class="sidebar">
+      <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp" alt="Connecting">
+      <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp" alt="Logo">
+      <a class="btn btn-contact" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
+      <a class="btn btn-visit" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
+    </aside>
+  </div>
+
+  <footer>
+    <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a><br>
+    <span>© 2026 Euro Drivers · Worms</span>
+  </footer>
 </div>
-
-<footer class="page-box">
-  <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a><br>
-  <span>© 2026 Euro Drivers · Worms</span>
-</footer>
 
 </body>
 </html>
