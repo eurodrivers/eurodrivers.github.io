@@ -7,82 +7,86 @@
 <meta name="robots" content="noindex, follow">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --orange: #E85D00; --black: #111111; --white: #ffffff; --grey-light: #f5f5f5; --grey-mid: #888; --grey-border: #ddd; --font: 'Verdana', Geneva, Tahoma, sans-serif; }
-  body { font-family: var(--font); font-size: 15px; color: var(--black); background: var(--white); line-height: 1.6; }
+  :root {
+    --orange: #E85D00;
+    --dark-anthracite: #2d2d2d;
+    --white: #ffffff;
+    --bg-outer: #424242;
+    --grey-border: #eee;
+    --font: 'Verdana', Geneva, Tahoma, sans-serif;
+  }
+  html { background: var(--bg-outer); }
+  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg-outer); line-height: 1.6; }
 
-  header { border-bottom: 3px solid var(--orange); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-  .logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: .03em; color: var(--black); text-decoration: none; line-height: 1.2; }
-  .logo-text span { display: block; font-size: 0.7rem; font-weight: 400; color: var(--grey-mid); letter-spacing: .06em; text-transform: uppercase; }
-  .btn-back { display: inline-block; background: transparent; color: var(--black); text-decoration: none; font-size: 0.82rem; padding: 0.5rem 1rem; border: 1px solid var(--grey-border); letter-spacing: .03em; }
-  .btn-back:hover { border-color: var(--orange); color: var(--orange); }
+  .page-box { max-width: 1080px; margin: 0 auto; background: var(--white); min-height: 100vh; display: flex; flex-direction: column; }
 
-  .content { max-width: 720px; margin: 3rem auto; padding: 0 2rem 4rem; }
-  .content h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 2rem; padding-bottom: .75rem; border-bottom: 2px solid var(--orange); text-transform: uppercase; letter-spacing: .06em; }
-  .content h2 { font-size: 0.82rem; font-weight: 700; margin: 1.75rem 0 .4rem; text-transform: uppercase; letter-spacing: .06em; color: #444; }
-  .content p, .content address { font-size: 0.88rem; color: #444; line-height: 1.8; font-style: normal; }
-  .content a { color: var(--orange); text-decoration: none; }
+  /* HEADERPIC */
+  .headerpic img { width: 100%; height: auto; display: block; }
+
+  /* CONTENT */
+  .content { padding: 3rem 2rem; flex-grow: 1; }
+  .content h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: var(--dark-anthracite); border-bottom: 2px solid var(--orange); padding-bottom: 0.5rem; display: inline-block; }
+  .content h2 { font-size: 0.9rem; font-weight: 700; margin: 1.5rem 0 0.5rem; text-transform: uppercase; color: var(--orange); }
+  .content p, .content address { font-size: 0.9rem; color: #444; line-height: 1.7; font-style: normal; margin-bottom: 1rem; }
+  .content a { color: var(--orange); text-decoration: none; font-weight: bold; }
   .content a:hover { text-decoration: underline; }
 
-  footer { background: var(--black); color: #ccc; font-size: 0.78rem; padding: 1.25rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; }
-  footer a { color: #ccc; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid #555; padding-bottom: 1px; }
-  footer a:hover { color: var(--white); border-bottom-color: var(--orange); }
+  /* FOOTER */
+  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.75rem; padding: 1.5rem 2rem; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  footer a { color: #ccc; text-decoration: none; }
 </style>
 </head>
 <body>
 
-<header>
-  <a class="logo-text" href="/">
-    Euro Drivers
-    <span>CE Driver Recruitment · Germany & EU</span>
-  </a>
-  <a class="btn-back" href="/">← Zurück</a>
-</header>
+<div class="page-box">
+  <div class="headerpic">
+    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung" width="1080" height="auto">
+  </div>
 
-<div class="content">
-  <h1>Impressum</h1>
+  <div class="content">
+    <h1>Impressum</h1>
 
- <h2>Angaben gemäß § 5 TMG</h2>
-  <address>
-    Eurodrivers Firma Peter Venyi<br>
-    Carl Orff Str. 1<br>
-    67551 Worms<br>
-    Deutschland
-  </address>
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <address>
+      Eurodrivers Firma Peter Venyi<br>
+      Carl-Orff-Str. 1<br>
+      67551 Worms<br>
+      Deutschland
+    </address>
 
-  <h2>Kontakt</h2>
-  <p>
-    Tel: +49 6247 2713745<br>
-    E-Mail: <a href="mailto:info@eurodrivers.de">info@eurodrivers.de</a><br>
-    Web: <a href="https://www.eurodrivers.de">www.eurodrivers.de</a>
-  </p>
+    <h2>Kontakt</h2>
+    <p>
+      Tel: +49 6247 2713745<br>
+      E-Mail: <a href="mailto:info@eurodrivers.de">info@eurodrivers.de</a><br>
+      Web: <a href="https://www.eurodrivers.de">www.eurodrivers.de</a>
+    </p>
 
-  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-  <p>Peter [Nachname], Anschrift wie oben</p>
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>Peter Venyi, Anschrift wie oben</p>
 
-  <h2>Hinweis zur Website</h2>
-  <p>
-    Diese Website dient als Informationsseite und Weiterleitungsportal zur Hauptpräsenz
-    <a href="https://euro-drivers.eu" target="_blank" rel="noopener">euro-drivers.eu</a>.
-    Alle inhaltlichen Angaben, Leistungsbeschreibungen und vollständigen rechtlichen
-    Informationen finden sich dort.
-  </p>
+    <h2>Hinweis zur Website</h2>
+    <p>
+      Diese Website dient als Informationsseite und Weiterleitungsportal zur Hauptpräsenz 
+      <a href="https://euro-drivers.eu" target="_blank" rel="noopener">euro-drivers.eu</a>. 
+      Alle inhaltlichen Angaben, Leistungsbeschreibungen und vollständigen rechtlichen Informationen finden sich dort.
+    </p>
 
-  <h2>Streitschlichtung</h2>
-  <p>
-    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-    <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.<br>
-    Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
-    Verbraucherschlichtungsstelle teilzunehmen.
-  </p>
+    <h2>Streitschlichtung</h2>
+    <p>
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+      <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.<br>
+      Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+  </div>
+
+  <footer>
+    <a href="/">Startseite</a>
+    <a href="/impressum.html">Impressum</a>
+    <a href="/datenschutz.html">Datenschutz</a>
+    <a href="https://euro-drivers.eu" target="_blank" rel="noopener">euro-drivers.eu</a>
+    <span>© 2026 Euro Drivers · Worms</span>
+  </footer>
 </div>
-
-<footer>
-  <a href="/">Startseite</a>
-  <a href="/impressum.html">Impressum</a>
-<a href="/datenschutz.html">Datenschutzerklärung</a>
-  <a href="https://euro-drivers.eu" target="_blank" rel="noopener">euro-drivers.eu</a>
-  <span>© 2026 Euro Drivers · Worms</span>
-</footer>
 
 </body>
 </html>
