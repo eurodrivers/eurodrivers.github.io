@@ -4,196 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Euro Drivers — CE Fahrer Vermittlung Deutschland & EU</title>
-<meta name="description" content="Euro Drivers vermittelt qualifizierte CE-Fahrer für Transportunternehmen in Deutschland und der EU. Direktvermittlung, keine Zeitarbeit.">
-<meta name="robots" content="noindex, follow">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --orange: #E85D00;
+    --dark-anthracite: #2d2d2d; /* Neue Hauptfarbe für Box */
     --black: #111111;
     --white: #ffffff;
-    --bg: #424242;
-    --grey-light: #f5f5f5;
-    --grey-mid: #888;
-    --grey-border: #ddd;
+    --bg: #1a1a1a; /* Hintergrund um die 1080px Box */
+    --grey-light: #f9f9f9;
+    --grey-mid: #666;
+    --grey-border: #eee;
     --font: 'Verdana', Geneva, Tahoma, sans-serif;
   }
   html { background: var(--bg); }
-  body { font-family: var(--font); font-size: 15px; color: var(--black); background: var(--bg); line-height: 1.6; }
+  body { font-family: var(--font); font-size: 15px; color: var(--dark-anthracite); background: var(--bg); line-height: 1.6; }
 
   .page-box {
     max-width: 1080px;
     margin: 0 auto;
-    background: var(--white);
+    background: var(--white); /* Schreibgrund ist hier WEISS */
+    color: var(--dark-anthracite);
   }
 
   /* HEADERPIC */
-  .headerpic img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  .headerpic img { width: 100%; height: auto; display: block; }
 
   /* HEADER */
-  header {
-    border-bottom: 3px solid var(--orange);
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: var(--white);
-  }
-  .logo-text { font-size: 1.2rem; font-weight: 700; letter-spacing: .03em; color: var(--black); text-decoration: none; line-height: 1.2; }
-  .logo-text span { display: block; font-size: 0.7rem; font-weight: 400; color: var(--grey-mid); letter-spacing: .06em; text-transform: uppercase; }
+  header { border-bottom: 3px solid var(--orange); padding: 1.25rem 2rem; display: flex; align-items: center; gap: 1rem; background: var(--white); }
+  .logo-text { font-size: 1.2rem; font-weight: 700; color: var(--dark-anthracite); text-decoration: none; }
+  .logo-text span { display: block; font-size: 0.7rem; font-weight: 400; color: var(--grey-mid); text-transform: uppercase; }
 
   /* HERO */
-  .hero { background: var(--black); color: var(--white); padding: 3rem 2rem; text-align: center; }
+  .hero { background: var(--dark-anthracite); color: var(--white); padding: 3rem 2rem; text-align: center; }
   .hero-eyebrow { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
-  .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+  .hero h1 { font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 1.25rem; }
   .hero h1 em { font-style: normal; color: var(--orange); }
-  .hero-sub { font-size: 0.95rem; color: #bbb; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+  .hero-sub { font-size: 0.95rem; color: #ddd; max-width: 520px; margin: 0 auto 2rem; }
 
-  /* CONNECTING IMG */
-  .connecting-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  /* CONNECTING IMG - Begrenzt */
+  .connecting-img { text-align: center; padding: 2rem 0; }
+  .connecting-img img { width: 100%; max-width: 380px; height: auto; display: block; margin: 0 auto; }
 
   /* LOGO + CTA */
-  .logo-cta {
-    background: var(--black);
-    padding: 2rem;
-    text-align: center;
-  }
-  .logo-cta img {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    display: block;
-    margin: 0 auto 1.5rem;
-  }
+  .logo-cta { background: var(--grey-light); padding: 2rem; text-align: center; }
+  .logo-cta img { width: 100%; max-width: 380px; height: auto; display: block; margin: 0 auto 1.5rem; }
 
-  .btn-main { display: inline-block; background: var(--orange); color: var(--white); text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 0.85rem 2.5rem; letter-spacing: .04em; text-transform: uppercase; border: 2px solid var(--orange); transition: background .15s, color .15s; }
+  .btn-main { display: inline-block; background: var(--orange); color: var(--white); text-decoration: none; font-weight: 700; padding: 0.85rem 2.5rem; text-transform: uppercase; border: 2px solid var(--orange); transition: .2s; }
   .btn-main:hover { background: transparent; color: var(--orange); }
 
   /* STRIP */
-  .strip { background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.5rem; font-size: 0.8rem; color: var(--grey-mid); text-transform: uppercase; letter-spacing: .06em; }
+  .strip { background: var(--white); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.5rem; font-size: 0.8rem; color: var(--grey-mid); text-transform: uppercase; }
   .strip span::before { content: '✓  '; color: var(--orange); }
 
   /* CARDS */
-  .cards { max-width: 860px; margin: 3rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border: 1px solid var(--grey-border); }
-  .card { padding: 1.5rem 1.25rem; border-right: 1px solid var(--grey-border); }
+  .cards { max-width: 860px; margin: 3rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--grey-border); }
+  .card { padding: 1.5rem; border-right: 1px solid var(--grey-border); }
   .card:last-child { border-right: none; }
-  .card-num { font-size: 1.8rem; font-weight: 700; color: var(--orange); line-height: 1; margin-bottom: .4rem; }
-  .card-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .07em; color: var(--grey-mid); margin-bottom: .5rem; }
-  .card-desc { font-size: 0.82rem; color: #444; line-height: 1.5; }
+  .card-num { font-size: 1.8rem; font-weight: 700; color: var(--orange); margin-bottom: .4rem; }
+  .card-label { font-size: 0.75rem; text-transform: uppercase; color: var(--dark-anthracite); font-weight: bold; margin-bottom: .5rem; }
+  .card-desc { font-size: 0.82rem; color: var(--grey-mid); }
 
   /* CTA BLOCK */
-  .cta-block { background: var(--orange); color: var(--white); text-align: center; padding: 3rem 2rem; }
-  .cta-block h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: .75rem; }
-  .cta-block p { font-size: 0.88rem; margin-bottom: 1.75rem; opacity: .9; }
-  .btn-white { display: inline-block; background: var(--white); color: var(--orange); text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 0.85rem 2rem; letter-spacing: .04em; text-transform: uppercase; border: 2px solid var(--white); transition: background .15s, color .15s; }
-  .btn-white:hover { background: transparent; color: var(--white); }
+  .cta-block { background: var(--dark-anthracite); color: var(--white); text-align: center; padding: 3rem 2rem; }
+  .btn-white { display: inline-block; background: var(--white); color: var(--dark-anthracite); text-decoration: none; font-weight: 700; padding: 0.85rem 2rem; text-transform: uppercase; }
 
   /* FOOTER */
-  footer { background: var(--black); color: #ccc; font-size: 0.78rem; padding: 1.25rem 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; }
-  footer a { color: #ccc; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid #555; padding-bottom: 1px; }
-  footer a:hover { color: var(--white); border-bottom-color: var(--orange); }
-
-  @media (max-width: 600px) {
-    .cards { grid-template-columns: 1fr; }
-    .card { border-right: none; border-bottom: 1px solid var(--grey-border); }
-    .card:last-child { border-bottom: none; }
-  }
+  footer { background: var(--black); color: #888; font-size: 0.75rem; padding: 1.5rem 2rem; text-align: center; }
 </style>
 </head>
 <body>
-
 <div class="page-box">
-
-  <!-- HEADERPIC -->
-  <div class="headerpic">
-    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp"
-         alt="CE Fahrer Vermittlung Deutschland und EU — Euro Drivers"
-         width="1080" height="auto">
-  </div>
-
-  <!-- HEADER -->
+  <div class="headerpic"><img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung" width="1080" height="auto"></div>
   <header>
-    <a class="logo-text" href="https://euro-drivers.eu" target="_blank" rel="noopener">
-      Euro Drivers
-      <span>CE Driver Recruitment · Germany & EU</span>
-    </a>
+    <a class="logo-text" href="https://euro-drivers.eu">Euro Drivers<span>CE Driver Recruitment · Germany & EU</span></a>
   </header>
-
-  <!-- HERO -->
   <section class="hero">
     <p class="hero-eyebrow">Direktvermittlung · Keine Zeitarbeit</p>
     <h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1>
-    <p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag, ohne Agenturmarge. Fahrer ab Tag 1 auf Ihrer Lohnliste.</p>
+    <p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p>
   </section>
-
-  <!-- CONNECTING IMG -->
   <div class="connecting-img">
-    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp"
-         alt="Euro Drivers – CE truck driver placement for Germany and EU transport companies"
-         width="1080" height="auto">
+    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp" alt="Connecting" width="380" height="auto">
   </div>
-
-  <!-- LOGO + CTA -->
   <div class="logo-cta">
-    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp"
-         alt="Euro Drivers Germany – CE Driver Recruitment Agency Worms"
-         width="380" height="auto">
-    <a class="btn-main" href="https://euro-drivers.eu" target="_blank" rel="noopener">
-      euro-drivers.eu besuchen
-    </a>
+    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/logo-eurodrivers-germany-ral2008-black.webp" alt="Logo" width="380" height="auto">
+    <a class="btn-main" href="https://euro-drivers.eu">euro-drivers.eu besuchen</a>
   </div>
-
-  <!-- STRIP -->
   <div class="strip">
     <span>Direktvermittlung</span>
-    <span>CE · Code 95 · ADR vorgeprüft</span>
-    <span>Rotation 3/1 · 4/1 · 6/2</span>
+    <span>CE · Code 95 · ADR</span>
     <span>EU-weites Sourcing</span>
-    <span>Fernverkehr & Transit</span>
   </div>
-
-  <!-- CARDS -->
   <div class="cards">
-    <div class="card">
-      <div class="card-num">20+</div>
-      <div class="card-label">Jahre Erfahrung</div>
-      <div class="card-desc">Gegründet 2003. Spezialisiert auf CE-Direktvermittlung im europäischen Fernverkehr.</div>
-    </div>
-    <div class="card">
-      <div class="card-num">15</div>
-      <div class="card-label">Sprachen</div>
-      <div class="card-desc">Fahrer-Sourcing in RO, HU, BG, SK, LT und weiteren EU-Ländern.</div>
-    </div>
-    <div class="card">
-      <div class="card-num">100%</div>
-      <div class="card-label">Direktanstellung</div>
-      <div class="card-desc">Kein Zeitarbeitsvertrag. Fahrer direkt auf der Lohnliste des Transportunternehmens.</div>
-    </div>
+    <div class="card"><div class="card-num">20+</div><div class="card-label">Jahre Erfahrung</div><div class="card-desc">Gegründet 2003. Spezialisiert auf CE-Direktvermittlung.</div></div>
+    <div class="card"><div class="card-num">15</div><div class="card-label">Sprachen</div><div class="card-desc">Fahrer-Sourcing in ganz Europa.</div></div>
+    <div class="card"><div class="card-num">100%</div><div class="card-label">Direktanstellung</div><div class="card-desc">Kein Zeitarbeitsvertrag.</div></div>
   </div>
-
-  <!-- CTA BLOCK -->
   <div class="cta-block">
-    <h2>Fahrer gesucht oder Stelle verfügbar?</h2>
-    <p>Alle Informationen, Anfragen und offene Stellen finden Sie auf unserer Hauptseite.</p>
-    <a class="btn-white" href="https://euro-drivers.eu/de/kontakt/" target="_blank" rel="noopener">Jetzt Kontakt aufnehmen</a>
+    <h2>Interesse an einer Zusammenarbeit?</h2>
+    <a class="btn-white" href="https://euro-drivers.eu/de/kontakt/">Jetzt Kontakt aufnehmen</a>
   </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <a href="/impressum.html">Impressum</a>
-    <a href="/datenschutz.html">Datenschutzerklärung</a>
-    <span>© 2026 Euro Drivers · Worms</span>
-  </footer>
-
-</div><!-- /page-box -->
-
+  <footer>© 2026 Euro Drivers · Worms</footer>
+</div>
 </body>
 </html>
