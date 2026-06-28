@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Euro Drivers — CE Fahrer Vermittlung</title>
-<!-- WICHTIG: Seite wird von Suchmaschinen nicht indexiert -->
 <meta name="robots" content="noindex, nofollow">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,13 +40,13 @@
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin: 0.2rem 0; }
 
   /* CTA Bereich */
-  .cta-wrapper { padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .cta-wrapper { padding: 2rem 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
   
-  /* Bilder: 280px breit, nebeneinander, vergrößert */
-  .cta-images { display: flex; align-items: center; justify-content: space-between; width: 280px; gap: 10px; margin-bottom: 0.2rem; }
-  .cta-images img { width: calc(50% - 5px); height: auto; object-fit: contain; }
+  /* Bilder: Jeweils 280px breit = 560px Gesamtbreite */
+  .cta-images { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 580px; gap: 20px; }
+  .cta-images img { width: 280px; height: auto; object-fit: contain; }
   
-  /* Buttons: untereinander, 280px breit */
+  /* Buttons: Untereinander, 280px breit */
   .btn { display: block; width: 280px; padding: 0.6rem 0; text-transform: uppercase; font-weight: 700; font-size: 0.75rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
   .btn-visit { background: var(--white); color: var(--orange); }
@@ -57,6 +56,8 @@
 
   @media (max-width: 768px) { 
     .hero, .strip, .cards { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+    .cta-images { flex-direction: column; width: 100%; gap: 1rem; }
+    .cta-images img { width: 100%; max-width: 280px; }
   }
 </style>
 </head>
