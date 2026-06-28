@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Euro Drivers — CE Fahrer Vermittlung Deutschland & EU</title>
+<title>Euro Drivers — CE Fahrer Vermittlung</title>
+<!-- WICHTIG: Seite wird von Suchmaschinen nicht indexiert -->
+<meta name="robots" content="noindex, nofollow">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -23,35 +25,41 @@
 
   .headerpic img { width: 100%; height: auto; display: block; }
 
-  /* Hero als kompaktes 3er Grid */
-  .hero { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: center; text-align: left; }
+  /* Hero */
+  .hero { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; align-items: start; text-align: left; }
   .hero-eyebrow { font-size: 0.65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); font-weight: bold; margin-bottom: 0.3rem; }
-  .hero h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.1; }
+  .hero h1 { font-size: 1.2rem; font-weight: 700; line-height: 1.1; }
   .hero h1 em { font-style: normal; color: var(--orange); }
   .hero-sub { font-size: 0.8rem; color: var(--grey-mid); }
 
-  /* Strip als 3er Grid */
-  .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.75rem 2rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; }
+  .connecting-img { text-align: center; padding: 0.5rem 0; }
+  .connecting-img img { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto; }
+
+  /* Strip */
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.75rem 1rem; font-size: 0.7rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; }
   .strip span::before { content: '✓ '; color: var(--orange); }
 
   /* Cards */
   .cards { max-width: 900px; margin: 1.5rem auto; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); }
   .card { padding: 1rem; border-right: 1px solid var(--grey-border); text-align: center; }
   .card:last-child { border-right: none; }
-  .card-num { font-size: 1.3rem; font-weight: 700; color: var(--orange); }
+  .card-num { font-size: 1.2rem; font-weight: 700; color: var(--orange); }
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin: 0.2rem 0; }
 
-  /* CTA Sektion mit Logo */
+  /* CTA */
   .cta-wrapper { padding: 1.5rem; text-align: center; }
-  .logo-cta img { width: 100%; max-width: 250px; display: block; margin: 0 auto 1rem; }
-  .btn { display: inline-block; margin: 0 0.5rem; padding: 0.6rem 1.5rem; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
+  .logo-cta img { width: 100%; max-width: 200px; display: block; margin: 0 auto 1rem; }
+  .btn { display: inline-block; margin: 0.25rem; padding: 0.6rem 1.2rem; text-transform: uppercase; font-weight: 700; font-size: 0.75rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
   .btn-visit { background: var(--white); color: var(--orange); }
 
-  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.7rem; padding: 1rem; text-align: center; gap: 1rem; display: flex; justify-content: center; }
-  footer a { color: #ccc; text-decoration: none; }
+  footer { background: var(--dark-anthracite); color: #ccc; font-size: 0.7rem; padding: 1rem; text-align: center; }
+  footer a { color: #ccc; text-decoration: none; margin: 0 0.5rem; }
 
-  @media (max-width: 768px) { .hero, .strip, .cards { grid-template-columns: 1fr; text-align: center; } }
+  @media (max-width: 768px) { 
+    .hero, .strip, .cards { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+    .logo-cta img { max-width: 150px; }
+  }
 </style>
 </head>
 <body>
@@ -60,16 +68,14 @@
   <div class="headerpic"><img src="https://euro-drivers.eu/wp-content/uploads/2026/06/truck-driver-recruitment-eu-de.webp" alt="CE Fahrer Vermittlung" width="1080" height="auto"></div>
 
   <section class="hero">
-    <div>
-      <p class="hero-eyebrow">Direktvermittlung · Keine Zeitarbeit</p>
-    </div>
-    <div>
-      <h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1>
-    </div>
-    <div>
-      <p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p>
-    </div>
+    <div><p class="hero-eyebrow">Direktvermittlung · Keine Zeitarbeit</p></div>
+    <div><h1>CE-Fahrer für<br><em>Deutschland & Europa</em></h1></div>
+    <div><p class="hero-sub">Euro Drivers vermittelt qualifizierte CE-Fahrer direkt an Transportunternehmen — ohne Zeitarbeitsvertrag.</p></div>
   </section>
+
+  <div class="connecting-img">
+    <img src="https://euro-drivers.eu/wp-content/uploads/2026/06/Connecting-Drivers-Carriers-Header-Widget.webp" alt="Connecting" width="380" height="auto">
+  </div>
 
   <div class="strip">
     <span>Direktvermittlung</span>
@@ -90,7 +96,8 @@
   </div>
 
   <footer>
-    <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a> | <span>© 2026 Euro Drivers</span>
+    <a href="/">Startseite</a> | <a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a><br>
+    <span>© 2026 Euro Drivers · Worms</span>
   </footer>
 </div>
 
