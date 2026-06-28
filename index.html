@@ -25,13 +25,15 @@
   .content-wrapper { display: flex; flex-direction: row; }
   .main-content { width: 680px; }
   
+  /* Hero & Sidebar starten nun exakt auf der gleichen Höhe (2rem Abstand zum Header) */
   .hero { padding: 2rem 2rem 1rem 2rem; text-align: left; }
+  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+
   .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-anthracite); opacity: 0.8; }
   .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.5rem; }
   .hero h1 em { font-style: normal; color: var(--orange); }
   .hero-sub { font-size: 1rem; color: var(--grey-mid); }
 
-  /* Bündiger nach oben geschoben */
   .strip { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--grey-light); border-top: 1px solid var(--grey-border); border-bottom: 1px solid var(--grey-border); padding: 0.8rem 1rem; font-size: 0.75rem; color: var(--grey-mid); text-transform: uppercase; text-align: center; font-weight: 600; margin-top: 0.5rem; }
   .strip span::before { content: '✓ '; color: var(--orange); }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--grey-border); margin: 1rem 2rem; }
@@ -40,8 +42,6 @@
   .card-num { font-size: 1.4rem; font-weight: 700; color: var(--orange); }
   .card-label { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; margin-top: 0.2rem; }
 
-  /* Sidebar */
-  .sidebar { width: 400px; padding: 2rem; border-left: 1px solid var(--grey-border); display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-top: 10px; }
   .sidebar img { width: 100%; max-width: 360px; height: auto; display: block; }
   .btn { display: block; width: 100%; max-width: 360px; padding: 0.75rem 0; text-align: center; text-transform: uppercase; font-weight: 700; font-size: 0.8rem; text-decoration: none; border: 2px solid var(--orange); transition: .2s; }
   .btn-contact { background: var(--orange); color: var(--white); }
